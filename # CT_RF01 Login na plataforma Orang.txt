@@ -91,7 +91,4 @@ Validar o funcionamento da tela de login da plataforma OrangeHRM Demo, garantind
 - `login_campos_vazios.png`  
 - `login_injection.png`
 
----
-
-## 📂 Estrutura do repositório
 
