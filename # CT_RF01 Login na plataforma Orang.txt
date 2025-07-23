@@ -1,0 +1,97 @@
+# CT_RF01: Login na plataforma OrangeHRM
+
+## 📝 Descrição
+Validar o funcionamento da tela de login da plataforma OrangeHRM Demo, garantindo acesso apenas com credenciais válidas.
+
+---
+
+## 🎯 Pré-requisitos
+- Navegador Chrome ou Firefox instalado
+- Acesso à internet
+- URL da aplicação: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+- Conta válida:
+  - **Username:** Admin
+  - **Password:** admin123
+
+---
+
+## 🧪 Casos de Teste
+
+### CT01 – Login com credenciais válidas
+- **Objetivo:** Verificar login bem-sucedido com dados corretos.
+- **Passos:**
+  1. Acessar a URL de login.
+  2. Preencher “Username” com `Admin`.
+  3. Preencher “Password” com `admin123`.
+  4. Clicar em “Login”.
+- **Resultado Esperado:** Usuário é redirecionado para o Dashboard (menu PIM, Time, etc).
+
+---
+
+### CT02 – Login com senha incorreta
+- **Objetivo:** Verificar falha de login com senha errada.
+- **Passos:**
+  1. Acessar a URL de login.
+  2. Inserir `Admin` como username.
+  3. Inserir `wrongpass` como password.
+  4. Clicar em “Login”.
+- **Resultado Esperado:** Mensagem “Invalid credentials” aparece e usuário permanece na página de login.
+
+---
+
+### CT03 – Login com username inválido
+- **Objetivo:** Verificar falha ao usar username inexistente.
+- **Passos:**
+  1. Acessar a URL de login.
+  2. Inserir `UnknownUser`.
+  3. Inserir `admin123` como password.
+  4. Clicar em “Login”.
+- **Resultado Esperado:** Mensagem “Invalid credentials” e sem acesso ao Dashboard.
+
+---
+
+### CT04 – Campos em branco
+- **Objetivo:** Testar validação com campos vazios.
+- **Passos:**
+  1. Acessar a URL de login.
+  2. Deixar username e password vazios.
+  3. Clicar em “Login”.
+- **Resultado Esperado:** Mensagem “Required” ao lado de cada campo obrigatório.
+
+---
+
+### CT05 – Injeção de script no campo username
+- **Objetivo:** Verificar segurança contra injeção de código.
+- **Passos:**
+  1. Acessar a URL de login.
+  2. Inserir `<script>alert(1)</script>` no campo username.
+  3. Inserir `admin123` no campo password.
+  4. Clicar em “Login”.
+- **Resultado Esperado:** Aplicação trata o input como texto, sem executar script; mensagem de erro “Invalid credentials”.
+
+---
+
+## 🛠️ Ambiente de Teste
+- **Browser:** Chrome 124 / Firefox 118  
+- **Plataforma:** Web  
+- **Ambiente:** Demo pública do OrangeHRM
+
+---
+
+## ✅ Critérios de Aceitação
+- Login bem-sucedido somente com credenciais válidas
+- Mensagens adequadas para falhas e validações obrigatórias
+- Tratamento seguro de inputs potencialmente perigosos
+
+---
+
+## 🧾 Evidências (sugestão)
+- `login_sucesso.png`  
+- `login_senha_incorreta.png`  
+- `login_campos_vazios.png`  
+- `login_injection.png`
+
+---
+
+## 📂 Estrutura do repositório
+
