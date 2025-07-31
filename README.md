@@ -20,14 +20,3 @@ O objetivo é oferecer uma base estruturada para aplicar testes manuais em difer
 
 ## 📁 Estrutura do Projeto
 
-```text
-/
-├── casos-de-teste/
-│   └── • diversos arquivos (.md, .xlsx)
-├── cenarios/
-│   └── • fluxos detalhados
-├── mapas-mentais/
-│   └── • arquivos em formato de imagem ou .xmind
-├── relatorios/
-│   └── • logs ou evidências (screenshots, registros)
-└── README.md
