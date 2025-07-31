@@ -20,3 +20,4 @@ O objetivo é oferecer uma base estruturada para aplicar testes manuais em difer
 
 ## 📁 Estrutura do Projeto
 
+gh repo clone RichaardDias/casos-teste-orangehrm-login
