@@ -19,3 +19,4 @@ O objetivo é oferecer uma base estruturada para aplicar testes manuais em difer
 ---
 
 ## 📁 Estrutura do Projeto
+Cenario_de_Teste_OrangeHRM.md
